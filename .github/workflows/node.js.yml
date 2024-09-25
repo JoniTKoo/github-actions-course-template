@@ -20,10 +20,13 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
+        with:
+          node-version: 14.x
       - name: npm install and build webpack
         run: |
           npm install
           npm run build
+        
 
   test:
 
